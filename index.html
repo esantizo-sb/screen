@@ -1,0 +1,67 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebShare Classroom</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="role-selector" id="roleSelector">
+      <h1>WebShare Classroom</h1>
+      <div class="role-buttons">
+        <button class="role-btn" id="hostBtn">
+          <i class="mdi mdi-television"></i>
+          Host Session
+        </button>
+        <button class="role-btn" id="observerBtn">
+          <i class="mdi mdi-eye"></i>
+          Join as Observer
+        </button>
+      </div>
+    </div>
+
+    <div class="host-panel hidden" id="hostPanel">
+      <div class="control-bar">
+        <button id="shareScreenBtn" class="control-btn">
+          <i class="mdi mdi-monitor-share"></i>
+          Share Screen
+        </button>
+        <button id="shareDocumentBtn" class="control-btn">
+          <i class="mdi mdi-file-document-outline"></i>
+          Share Document
+        </button>
+        <button id="shareLinkBtn" class="control-btn">
+          <i class="mdi mdi-link"></i>
+          Share Link
+        </button>
+        <button id="freezeScreensBtn" class="control-btn">
+          <i class="mdi mdi-snowflake"></i>
+          Freeze Screens
+        </button>
+        <div class="connected-users">
+          <i class="mdi mdi-account-group"></i>
+          <span id="userCount">0</span> Connected
+        </div>
+      </div>
+      <div class="main-content">
+        <div id="screenPreview"></div>
+        <div id="documentArea" class="hidden"></div>
+      </div>
+    </div>
+
+    <div class="observer-panel hidden" id="observerPanel">
+      <div class="status-bar">
+        <span id="connectionStatus">Connected as Observer</span>
+      </div>
+      <div class="observer-content">
+        <div id="observerScreen"></div>
+      </div>
+    </div>
+  </div>
+  <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt" style="display: none">
+  <script src="main.js" type="module"></script>
+</body>
+</html>

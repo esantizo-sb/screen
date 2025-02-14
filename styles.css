@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #f0f2f5;
+  height: 100vh;
+}
+
+.container {
+  height: 100vh;
+  padding: 20px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Role Selector */
+.role-selector {
+  max-width: 600px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.role-selector h1 {
+  margin-bottom: 40px;
+  color: #1a73e8;
+}
+
+.role-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.role-btn {
+  padding: 20px 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s;
+}
+
+.role-btn:hover {
+  background: #1557b0;
+}
+
+/* Host Panel */
+.host-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.control-bar {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.control-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #1a73e8;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+
+.control-btn:hover {
+  background: #1557b0;
+}
+
+.connected-users {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5f6368;
+}
+
+.main-content {
+  flex-grow: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#screenPreview {
+  width: 100%;
+  height: 100%;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+/* Observer Panel */
+.observer-panel {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.status-bar {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.observer-content {
+  flex-grow: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#observerScreen {
+  width: 100%;
+  height: 100%;
+  background: #f8f9fa;
+  border-radius: 6px;
+}
+
+.frozen {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Document Area */
+#documentArea {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
